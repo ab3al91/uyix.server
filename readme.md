@@ -16,9 +16,6 @@
 #-------------------install homebridge------------------------
 
 
-
-
-
 #START
 # sudo node app.js
 # chech dmesg device port name
