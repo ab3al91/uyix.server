@@ -1,0 +1,19 @@
+{
+  "name": "smart-home",
+  "version": "1.0.0",
+  "description": "smart-home project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ab3al",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "express-ws": "^4.0.0",
+    "gpio": "^0.2.10",
+    "modbus-serial": "^7.4.2",
+    "orange-pi-gpio": "^1.0.2"
+  }
+}

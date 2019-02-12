@@ -1,0 +1,86 @@
+{
+  "homeid":"bicityseoul",
+  "date":null,
+  "time":null,
+  "groups":{
+    "1":{
+      "title":"ПЛК",
+      "fake":true,
+      "devices":[
+        /*{"name":"PIR","value":0,"type":"PIR","subtype":"SENSOR"},
+        {"name":"Light","value":0,"type":"SWITCH","subtype":"RELAY"},
+        {"name":"Blink","value":0,"type":"SWITCH","subtype":"RELAY"},*/
+        {"name":"Коридор","value":0,"type":"SWITCH","subtype":"RELAY","fake":true},
+        {"name":"Зал","value":0,"type":"SWITCH","subtype":"RELAY","fake":true},
+        {"name":"Кухня","value":0,"type":"SWITCH","subtype":"RELAY","fake":true},
+        {"name":"Сан-узел","value":0,"type":"SWITCH","subtype":"RELAY","fake":true},
+        {"name":"Кладовая","value":0,"type":"SWITCH","subtype":"RELAY","fake":true},
+        {"name":"Коридор","value":0,"type":"SOCKET","subtype":"RELAY","fake":true},
+        {"name":"Зал1","value":0,"type":"SOCKET","subtype":"RELAY","fake":true},
+        {"name":"Зал2","value":0,"type":"SOCKET","subtype":"RELAY","fake":true},
+        {"name":"Кухня","value":0,"type":"SOCKET","subtype":"RELAY","fake":true},
+        {"name":"Bell","value":0,"type":"TOGGLE","subtype":"RELAY","fake":true},
+        {"name":"Сирена","value":1,"type":"ALARM","subtype":"RELAY","fake":true},
+        {"name":"Bell","value":1,"type":"HALL","subtype":"SENSOR","fake":true},
+        {"name":"Коридор","value":0,"type":"HALL","subtype":"SENSOR","fake":true},
+        {"name":"Зал","value":0,"type":"HALL","subtype":"SENSOR","fake":true},
+        {"name":"Кухня","value":0,"type":"HALL","subtype":"SENSOR","fake":true},
+        {"name":"Сан-узел","value":0,"type":"HALL","subtype":"SENSOR","fake":true},
+        {"name":"Кладовая","value":0,"type":"HALL","subtype":"SENSOR","fake":true},
+        {"name":"Счетчик","value":2,"type":"METER","subtype":"POWER","fake":true}
+      ]
+    },
+    "2":{
+      "fake":true,
+      "title":"Сенсор(Зал)",
+      "devices":[
+        {"name":"PIR","type":"PIR","subtype":"SENSOR","value":0},
+        {"name":"Temp","type":"TEMP","subtype":"METER","value":23},
+        {"name":"Humidity","type":"HUMIDITY","subtype":"METER","value":22},
+        {"name":"Fire","type":"FIRE","subtype":"SENSOR","value":0},
+        {"name":"TV on/off","type":"TV","subtype":"IR","value":0},
+        {"name":"AIR on/off","type":"AIR","subtype":"IR","value":0}
+      ]
+    },
+    "3":{
+      "fake":true,
+      "title":"Сенсор(Кухня)",
+      "devices":[
+        {"name":"PIR","type":"PIR","subtype":"SENSOR","value":0},
+        {"name":"Temp","type":"TEMP","subtype":"METER","value":22},
+        {"name":"Humidity","type":"HUMIDITY","subtype":"METER","value":28},
+        {"name":"Fire","type":"FIRE","subtype":"SENSOR","value":0}
+      ]
+    },
+    "4":{
+      "fake":true,
+      "title":"Сенсор(Санузел)",
+      "devices":[
+        {"name":"PIR","type":"PIR","subtype":"SENSOR","value":1},
+        {"name":"Temp","type":"TEMP","subtype":"METER","value":21},
+        {"name":"Humidity","type":"HUMIDITY","subtype":"METER","value":50}
+      ]
+    },
+    "5":{
+      "fake":true,
+      "title":"Сенсор(Коридор)",
+      "devices":[
+        {"name":"PIR","type":"PIR","subtype":"SENSOR","value":1},
+        {"name":"Temp","type":"TEMP","subtype":"METER","value":10},
+        {"name":"Humidity","type":"HUMIDITY","subtype":"METER","value":40}
+      ]
+    },
+    "6":{
+      "fake":true,
+      "title":"HUB(Санузел)",
+      "devices":[
+        {"name":"Задвижка","type":"VALVE","subtype":"RELAY","value":0},
+        {"name":"Счетчик гор","type":"WATER COLD","subtype":"METER","value":3},
+        {"name":"Счетчик хол","type":"WATER HOT","subtype":"METER","value":2},
+        {"name":"Протечка Кухня","type":"LEAK","subtype":"SENSOR","value":0},
+        {"name":"Протечка Санузел","type":"LEAK","subtype":"SENSOR","value":0},
+        {"name":"Status Valve","type":"VALVE","subtype":"SENSOR","value":0}
+      ]
+    }
+  }
+}

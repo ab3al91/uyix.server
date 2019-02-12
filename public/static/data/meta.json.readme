@@ -1,0 +1,31 @@
+{
+  "homeid":"bicityseoul",
+  "others":{
+    "bell":[1,2] // [slave,register]
+  },
+  "meters":{
+    "Хол-Вода":[3,2]
+  },
+  "rooms":{
+      "HALL":{
+        "name":"Зал",
+        "disabled":true
+        "leak":[3,-1], // if address negative then inversed boolean used
+        "valve":[3,3,3,4] // [value,status]
+      },
+  },
+  "slaves":{
+    "1":{
+      "name":"ПЛК",
+      "regs":["CHANGE","RELAY.LIGHT","RELAY.BELL",null,"SENSOR.HALL.LIGHT"] // what primitive type, then type, when human readable type
+    },
+    "2":{
+      "name":"Сенсор(Корридор)",
+      "regs":["CHANGE","SENSOR.PIR.MOTION","SENSOR.TEMP","SENSOR.HUMIDITY"]
+    },
+    "3":{
+      "name":"Сенсор(Ванная)",
+      "regs":["CHANGE","SENSOR.LEAK","METER.COLD","RELAY.VALVE","SENSOR.VALVE"]
+    }
+  }
+}

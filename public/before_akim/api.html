@@ -1,0 +1,196 @@
+<h2>Структура Данных</h2>
+Данные можно запрашивать следующим методом
+<code>
+	GET https://apps.bein.tech/uyi/api/v1/data.json
+</code>
+Данные получают ввиде 
+<code>
+<div id="json"><div class="collapser"></div>{<span class="ellipsis"></span><ul class="obj collapsible"><li><div class="hoverable"><span class="property">homeid</span>: <span class="type-string">"bicityseoul"</span>,</div></li><li><div class="hoverable"><span class="property">date</span>: <span class="type-number">1539431869761</span>,</div></li><li><div class="hoverable"><span class="property">time</span>: <span class="type-string">"17:57:49"</span>,</div></li><li><div class="hoverable"><span class="property">groups</span>: <div class="collapser"></div>{<span class="ellipsis"></span><ul class="obj collapsible"><li><div class="hoverable"><span class="property">1</span>: <div class="collapser"></div>{<span class="ellipsis"></span><ul class="obj collapsible"><li><div class="hoverable"><span class="property">title</span>: <span class="type-string">"ПЛК"</span>,</div></li><li><div class="hoverable"><span class="property">devices</span>: <div class="collapser"></div>[<span class="ellipsis"></span><ul class="array collapsible"><li><div class="hoverable"><div class="collapser"></div>{<span class="ellipsis"></span><ul class="obj collapsible"><li><div class="hoverable"><span class="property">name</span>: <span class="type-string">"Движение"</span>,</div></li><li><div class="hoverable"><span class="property">type</span>: <span class="type-string">"PIR"</span>,</div></li><li><div class="hoverable"><span class="property">value</span>: <span class="type-number">0</span></div></li></ul>},</div></li><li><div class="hoverable"><div class="collapser"></div>{<span class="ellipsis"></span><ul class="obj collapsible"><li><div class="hoverable"><span class="property">name</span>: <span class="type-string">"Свет"</span>,</div></li><li><div class="hoverable"><span class="property">type</span>: <span class="type-string">"LIGHT"</span>,</div></li><li><div class="hoverable"><span class="property">value</span>: <span class="type-number">0</span></div></li></ul>},</div></li><li><div class="hoverable"><div class="collapser"></div>{<span class="ellipsis"></span><ul class="obj collapsible"><li><div class="hoverable"><span class="property">name</span>: <span class="type-string">"Default"</span>,</div></li><li><div class="hoverable"><span class="property">type</span>: <span class="type-string">"NOOP"</span>,</div></li><li><div class="hoverable"><span class="property">value</span>: <span class="type-number">0</span></div></li></ul>}</div></li></ul>]</div></li></ul>},</div></li><li><div class="hoverable"><span class="property">2</span>: <div class="collapser"></div>{<span class="ellipsis"></span><ul class="obj collapsible"><li><div class="hoverable"><span class="property">title</span>: <span class="type-string">"HUB"</span>,</div></li><li><div class="hoverable"><span class="property">devices</span>: <div class="collapser"></div>[<span class="ellipsis"></span><ul class="array collapsible"><li><div class="hoverable"><div class="collapser"></div>{<span class="ellipsis"></span><ul class="obj collapsible"><li><div class="hoverable"><span class="property">name</span>: <span class="type-string">"Движение"</span>,</div></li><li><div class="hoverable"><span class="property">type</span>: <span class="type-string">"PIR"</span>,</div></li><li><div class="hoverable"><span class="property">value</span>: <span class="type-number">0</span></div></li></ul>},</div></li><li><div class="hoverable"><div class="collapser"></div>{<span class="ellipsis"></span><ul class="obj collapsible"><li><div class="hoverable"><span class="property">name</span>: <span class="type-string">"Температура"</span>,</div></li><li><div class="hoverable"><span class="property">type</span>: <span class="type-string">"TEMP"</span>,</div></li><li><div class="hoverable"><span class="property">value</span>: <span class="type-number">28</span></div></li></ul>},</div></li><li><div class="hoverable"><div class="collapser"></div>{<span class="ellipsis"></span><ul class="obj collapsible"><li><div class="hoverable"><span class="property">name</span>: <span class="type-string">"Влажность"</span>,</div></li><li><div class="hoverable"><span class="property">type</span>: <span class="type-string">"HUM"</span>,</div></li><li><div class="hoverable"><span class="property">value</span>: <span class="type-number">18</span></div></li></ul>}</div></li></ul>]</div></li></ul>}</div></li></ul>}</div></li></ul>}</div>
+</code>
+
+
+<h2>SetWebhook</h2>
+Для регистрации вебхука используйте данный метод
+<code>
+	GET https://apps.bein.tech/uyi/api/v1/{apikey}/setWebhook?url={YOUR_CALLBACK_URL}
+</code>
+YOUR_CALLBACK_URL это ваш URL куда будут отправлятся данные о событиях<br>
+Пример : <pre>https://apps.bein.tech/uyi/api/v1/biclients/setWebhook?url=http://api.bi.group/smarthome/events</pre>
+в формате 
+Данные будут поступать в формате 
+<code>
+<div id="json"><div class="collapser"></div>{<span class="ellipsis"></span>
+<ul class="obj collapsible"><li><div class="hoverable"><span class="property">1</span>: <div class="collapser"></div>{<span class="ellipsis"></span><ul class="obj collapsible"><li><div class="hoverable"><span class="property">title</span>: <span class="type-string">"ПЛК"</span>,</div></li><li><div class="hoverable"><span class="property">devices</span>: <div class="collapser"></div>[<span class="ellipsis"></span><ul class="array collapsible"><li><div class="hoverable"><div class="collapser"></div>{<span class="ellipsis"></span><ul class="obj collapsible"><li><div class="hoverable"><span class="property">name</span>: <span class="type-string">"Движение"</span>,</div></li><li><div class="hoverable"><span class="property">type</span>: <span class="type-string">"PIR"</span>,</div></li><li><div class="hoverable"><span class="property">value</span>: <span class="type-number">0</span></div></li></ul>},</div></li><li><div class="hoverable"><div class="collapser"></div>{<span class="ellipsis"></span><ul class="obj collapsible"><li><div class="hoverable"><span class="property">name</span>: <span class="type-string">"Свет"</span>,</div></li><li><div class="hoverable"><span class="property">type</span>: <span class="type-string">"LIGHT"</span>,</div></li><li><div class="hoverable"><span class="property">value</span>: <span class="type-number">0</span></div></li></ul>},</div></li><li><div class="hoverable"><div class="collapser"></div>{<span class="ellipsis"></span><ul class="obj collapsible"><li><div class="hoverable"><span class="property">name</span>: <span class="type-string">"Default"</span>,</div></li><li><div class="hoverable"><span class="property">type</span>: <span class="type-string">"NOOP"</span>,</div></li><li><div class="hoverable"><span class="property">value</span>: <span class="type-number">0</span></div></li></ul>}</div></li></ul>]</div></li></ul>}</div></li></ul>}
+</code>
+
+
+<h2>Service Alerts</h2>
+Сервис получения уведомлений о событиях КСК
+<code>
+	POST https://apps.bein.tech/uyi/api/v1/{apikey}/alert
+</code>
+Внутри тела передать текст сообщения который надо вывести на экраны домофонов ( формат может быть ввиде html )
+
+<h2>Master переключатель Отключить Все</h2>
+Сервис получения уведомлений о событиях КСК
+<code>
+	POST https://apps.bein.tech/uyi/api/v1/{apikey}/master/{on|off}
+</code>
+Переключатель режима "Выключить все"<br>
+Пример : <pre>https://apps.bein.tech/uyi/api/v1/biclients/master/on</pre>
+
+<hr>
+
+<h2>NoopWebhook</h2>
+Для дебага вебхука
+<code>
+	GET https://apps.bein.tech/uyi/api/v1/noopWebhook
+</code>
+
+
+<h2>Set</h2>
+Для дебага устройств
+<code>
+	GET https://apps.bein.tech/uyi/api/v1/{apikey}/set/{slaveId}/{registry}/{value}
+</code>
+Где slaveId - это номер modbus slaveа, registry - номер регистра ( номер сенсора или реле ) , value - значение регистра
+
+<style>
+body {
+	margin-bottom: 23px;
+	white-space: normal !important;
+	font-size:11pt;
+	font-family: sans-serif;
+	width:50%;
+}
+
+code {
+	display:block;
+	padding:10px;
+	margin:10px 0;
+	background:#ccc;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px 0px 0px 26px;
+}
+
+li {
+	position: relative;
+}
+
+.hoverable {
+	transition: background-color .2s ease-out 0s;
+	-webkit-transition: background-color .2s ease-out 0s;
+	display: inline-block;
+}
+
+.hovered {
+	transition-delay: .2s;
+	-webkit-transition-delay: .2s;
+}
+
+.selected {
+	outline-style: solid;
+	outline-width: 1px;
+	outline-style: dotted;
+}
+
+.collapsed>.collapsible {
+	display: none;
+}
+
+.ellipsis {
+	display: none;
+}
+
+.collapsed>.ellipsis {
+	display: inherit;
+}
+
+.collapser {
+	position: absolute;
+	top: 1px;
+	left: -1.5em;
+	cursor: default;
+	user-select: none;
+	-webkit-user-select: none;
+}
+
+.status {
+	position: fixed;
+	left: 0px;
+	bottom: 0px;
+	min-width: 628px;
+	border-color: #c2c2c2;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	border-style: solid;
+	border-top-right-radius: 4px;
+	height: 16px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-right: 7px;
+	padding-left: 4px;
+	font-family: sans-serif;
+	font-size: 12px;	
+	opacity: 0;
+	background-color: #d2d2f6;
+	color: #696969;
+	transition: opacity .2s ease-out;	
+	-webkit-transition: opacity .2s ease-out;
+	user-select: none;
+	-webkit-user-select: none;
+}
+
+.status:not(:empty ) {
+	opacity: 1;
+}
+
+.toolbox {
+	font-family: sans-serif;
+	font-size: 13px;
+	opacity: .25;
+	background-color: #d2d2f6;
+	position: fixed;
+	right: 0px;
+	top: 0px;
+	border-color: #c2c2c2;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-style: solid;
+	border-bottom-left-radius: 4px;
+	padding-bottom: 3px;
+	transition: opacity .2s ease-out;
+	-webkit-transition: opacity .2s ease-out;
+	cursor: default;
+	user-select: none;
+	-webkit-user-select: none;
+	padding-left: 2px;
+}
+
+.toolbox:hover {
+	opacity: 1;
+}
+
+.toolbox>* {
+	padding-left: 3px;
+	padding-right: 3px;
+}
+
+.toolbox>a {
+	padding-left: 5px;
+}
+
+.toolbox>img {
+	height: 14px;
+	vertical-align: bottom;
+	cursor: pointer;
+}
+</style>
